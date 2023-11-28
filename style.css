@@ -79,23 +79,66 @@ body {
 }
 
 .title .greyBar {
+  width: 100%;
+  height: 1px;
+  background-color: #2d2d2d;
+  margin-top: 1rem;
 }
 
-.Home {
+.home {
+  display: flex;
+  margin-top: 2rem;
 }
-.Home img {
-}
-
-.Home .containerTile {
-}
-
-.Home .containerTile h2 {
+.home img {
+  margin-left: 5rem;
+  margin-right: 2.5rem;
 }
 
-.Home .containerTile h3 {
+.home .containerTitle {
 }
 
-.Home button {
+.home .containerTitle h2 {
+  font-family: GreenthOutline;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.home .containerTitle h3 {
+  font-family: "Greenth", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.home button {
+  padding: 15px 30px; /* Increase the padding to make the button bigger */
+
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    var(--violet) 30%,
+    #ff00fe 30%,
+    #ff00fe 36%,
+    var(--rouge) 36%
+  );
+  background-size: 400% 100%;
+  transition: background-position 0.6s ease;
+  background-position: right center;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.home button:hover {
+  background-position: left center;
 }
 
 /* Media Queries */
