@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: Greenth;
+  src: url("source/fonts/Greenth.otf") format("opentype");
+}
+@font-face {
+  font-family: GreenthOutline;
+  src: url("source/fonts/Greenth\ Outline.otf") format("opentype");
+}
+:root {
+  --noir: #121212;
+  --violet: #6c5885;
+  --rouge: #aa3946;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: var(--noir);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title .containerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title .containerTitle h1 {
+  font-size: 2.6rem;
+  margin: 0;
+  padding: 0;
+  margin-top: -1.5rem;
+}
+.title .containerTitle .un {
+  font-family: "Greenth", sans-serif;
+}
+
+.title .containerTitle .deux {
+  font-family: "GreenthOutline", sans-serif;
+}
+
+.title .containerReview {
+  display: flex;
+  justify-content: flex-end; /* Updated property */
+  margin-top: -04.5rem;
+  margin-right: 1rem;
+}
+
+.title .containerReview button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    var(--violet) 30%,
+    #ff00fe 30%,
+    #ff00fe 36%,
+    var(--rouge) 36%
+  );
+  background-size: 400% 100%;
+  transition: background-position 0.6s ease;
+  background-position: right center;
+  font-weight: bold;
+}
+
+.title .containerReview button:hover {
+  background-position: left center;
+}
+
+.title .greyBar {
+}
+
+.Home {
+}
+.Home img {
+}
+
+.Home .containerTile {
+}
+
+.Home .containerTile h2 {
+}
+
+.Home .containerTile h3 {
+}
+
+.Home button {
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .title .containerTitle h1 {
+    font-size: 2.5rem;
+  }
+
+  .title .containerReview {
+    flex-direction: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    margin-top: -1.8rem;
+  }
+  .title .containerReview button {
+    margin-top: 1rem;
+    font-size: 0.8rem; /* Reduce the font size */
+    padding: 8px 16px; /* Reduce the padding */
+  }
+
+  .Home .containerTile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .Home .containerTile h2 {
+    font-size: 1.5rem;
+  }
+
+  .Home .containerTile h3 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title .containerTitle h1 {
+    font-size: 2rem; /* Adjust the font size */
+  }
+
+  .title .containerReview {
+    margin-top: -1.5rem; /* Adjust the margin-top */
+  }
+
+  .title .containerReview button {
+    font-size: 0.7rem; /* Adjust the font size */
+    padding: 6px 12px; /* Adjust the padding */
+  }
+
+  .Home .containerTile {
+    grid-template-columns: 1fr; /* Change to single column layout */
+    gap: 0.5rem; /* Adjust the gap */
+  }
+
+  .Home .containerTile h2 {
+    font-size: 1.2rem; /* Adjust the font size */
+  }
+
+  .Home .containerTile h3 {
+    font-size: 0.9rem; /* Adjust the font size */
+  }
+}
