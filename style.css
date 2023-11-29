@@ -342,7 +342,7 @@ li.block {
 }
 @media screen and (max-width: 560px) {
   .titles h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 @media screen and (max-width: 320px) {
