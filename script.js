@@ -98,7 +98,6 @@ if (window.innerWidth > 1190) {
     elements.homePage.style.display = "block";
     elements.container.style.display = "none";
     document.body.style.overflow = "auto";
-    document.body.style.height = "auto";
     //reset the propreties on the css for the * element
     // make an fade in animation for the homepage
     TweenMax.from(elements.homePage, 1, {
