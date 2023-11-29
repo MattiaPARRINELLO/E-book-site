@@ -107,3 +107,8 @@ if (window.innerWidth > 1190) {
     });
   }, 5600);
 }
+
+//when appPlancheButton is clicked, we want to download a pdf file
+elements.translate.appPlancheButton.addEventListener("click", () => {
+  window.open("source/pdf/Ebook Planche by Mattia PARRINELLO.pdf", "_blank");
+});
