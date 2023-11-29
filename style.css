@@ -47,7 +47,7 @@ body {
 
 .title .containerReview {
   display: flex;
-  justify-content: flex-end; /* Updated property */
+  justify-content: flex-end;
   margin-top: -04.5rem;
   margin-right: 1rem;
 }
@@ -98,7 +98,8 @@ body {
 }
 
 .home .containerTitle h2 {
-  font-family: GreenthOutline;
+  font-family: Greenth;
+  font-weight: 100;
   font-size: 2rem;
   margin: 0;
   padding: 0;
@@ -114,8 +115,7 @@ body {
 }
 
 .home button {
-  padding: 15px 30px; /* Increase the padding to make the button bigger */
-
+  padding: 15px 30px;
   color: white;
   border: none;
   font-size: 1.3rem;
@@ -141,7 +141,6 @@ body {
   background-position: left center;
 }
 
-/* Media Queries */
 @media screen and (max-width: 768px) {
   .title .containerTitle h1 {
     font-size: 2.5rem;
@@ -156,8 +155,8 @@ body {
   }
   .title .containerReview button {
     margin-top: 1rem;
-    font-size: 0.8rem; /* Reduce the font size */
-    padding: 8px 16px; /* Reduce the padding */
+    font-size: 0.8rem;
+    padding: 8px 16px;
   }
 
   .Home .containerTile {
@@ -176,28 +175,28 @@ body {
 }
 @media screen and (max-width: 480px) {
   .title .containerTitle h1 {
-    font-size: 2rem; /* Adjust the font size */
+    font-size: 2rem;
   }
 
   .title .containerReview {
-    margin-top: -1.5rem; /* Adjust the margin-top */
+    margin-top: -1.5rem;
   }
 
   .title .containerReview button {
-    font-size: 0.7rem; /* Adjust the font size */
-    padding: 6px 12px; /* Adjust the padding */
+    font-size: 0.7rem;
+    padding: 6px 12px;
   }
 
   .Home .containerTile {
-    grid-template-columns: 1fr; /* Change to single column layout */
-    gap: 0.5rem; /* Adjust the gap */
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 
   .Home .containerTile h2 {
-    font-size: 1.2rem; /* Adjust the font size */
+    font-size: 1.2rem;
   }
 
   .Home .containerTile h3 {
-    font-size: 0.9rem; /* Adjust the font size */
+    font-size: 0.9rem;
   }
 }
