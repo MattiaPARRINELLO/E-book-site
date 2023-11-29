@@ -7,6 +7,23 @@
   font-family: GreenthOutline;
   src: url("source/fonts/Greenth\ Outline.otf") format("opentype");
 }
+@font-face {
+  font-family: Bigilla;
+  src: url("source/fonts/Bigilla.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Barracuda;
+  src: url("source/fonts/Barracuda-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
 :root {
   --noir: #121212;
   --violet: #6c5885;
@@ -14,45 +31,128 @@
 }
 
 body {
-  font-family: "Barlow", sans-serif;
-  background-color: var(--noir);
-  color: white;
-  margin: 0;
-  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  color: #fff;
 }
 
-.title {
+h1.header {
+  font-family: Bigilla;
+  font-size: 200px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  width: 90%;
+}
+
+.header .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.titles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.titles h1 {
+  font-weight: 500;
+  font-size: 240px;
+  font-family: "Barracuda";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul.titles {
+  display: flex;
+}
+ul.blocks {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  list-style: none;
+  justify-content: center;
+  align-self: center;
+}
+
+li.block {
+  height: 100vh;
+}
+
+.block-1 {
+  width: 20px;
+  margin: 0 10px;
+  background: #da0510;
+}
+
+.block-2 {
+  width: 14px;
+  margin: 0 200px 0 20px;
+  background: #2001fe;
+}
+
+.block-3 {
+  width: 8px;
+  margin: 0 40px;
+  background: #01fefe;
+}
+
+.block-4 {
+  width: 20px;
+  margin: 0 400px;
+  background: #00fe00;
+}
+
+.block-5 {
+  width: 8px;
+  margin: 0 20px;
+  background: #f4f315;
+}
+
+.block-6 {
+  width: 28px;
+  background: #fa04f9;
+}
+
+.titre {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.title .containerTitle {
+.titre .containerTitle {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.title .containerTitle h1 {
+.titre .containerTitle h1 {
   font-size: 2.6rem;
   margin: 0;
   padding: 0;
   margin-top: -1.5rem;
 }
-.title .containerTitle .un {
+.titre .containerTitle .un {
   font-family: "Greenth", sans-serif;
 }
 
-.title .containerTitle .deux {
+.titre .containerTitle .deux {
   font-family: "GreenthOutline", sans-serif;
 }
 
-.title .containerReview {
+.titre .containerReview {
   display: flex;
   justify-content: flex-end;
   margin-top: -04.5rem;
   margin-right: 1rem;
 }
 
-.title .containerReview button {
+.titre .containerReview button {
   color: white;
   border: none;
   padding: 10px 20px;
@@ -74,11 +174,11 @@ body {
   font-weight: bold;
 }
 
-.title .containerReview button:hover {
+.titre .containerReview button:hover {
   background-position: left center;
 }
 
-.title .greyBar {
+.titre .greyBar {
   width: 100%;
   height: 1px;
   background-color: #2d2d2d;
@@ -92,6 +192,7 @@ body {
 .home img {
   margin-left: 5rem;
   margin-right: 2.5rem;
+  width: 300px;
 }
 
 .home .containerTitle {
@@ -142,61 +243,110 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .title .containerTitle h1 {
+  .titre .containerTitle h1 {
     font-size: 2.5rem;
   }
 
-  .title .containerReview {
+  .titre .containerReview {
     flex-direction: none;
     align-items: center;
     justify-content: center;
     margin-right: 0;
     margin-top: -1.8rem;
   }
-  .title .containerReview button {
+  .titre .containerReview button {
     margin-top: 1rem;
     font-size: 0.8rem;
     padding: 8px 16px;
   }
 
-  .Home .containerTile {
+  .home .containerTile {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
-  .Home .containerTile h2 {
+  .home .containerTile h2 {
     font-size: 1.5rem;
   }
 
-  .Home .containerTile h3 {
+  .home .containerTile h3 {
     font-size: 1rem;
+  }
+  .home img {
+    width: 200px;
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+  .home button {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 @media screen and (max-width: 480px) {
-  .title .containerTitle h1 {
+  .titre .containerTitle h1 {
     font-size: 2rem;
   }
 
-  .title .containerReview {
+  .titre .containerReview {
     margin-top: -1.5rem;
   }
 
-  .title .containerReview button {
+  .titre .containerReview button {
     font-size: 0.7rem;
     padding: 6px 12px;
   }
 
-  .Home .containerTile {
+  .home .containerTile {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 
-  .Home .containerTile h2 {
+  .home .containerTile h2 {
     font-size: 1.2rem;
   }
 
-  .Home .containerTile h3 {
+  .home .containerTile h3 {
     font-size: 0.9rem;
+  }
+  .home button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* Make the texte of home on top of the image */
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .titles h1 {
+    font-size: 180px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .titles h1 {
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titles h1 {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .titles h1 {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .titles h1 {
+    font-size: 60px;
   }
 }
