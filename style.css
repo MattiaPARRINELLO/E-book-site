@@ -245,6 +245,7 @@ li.block {
 @media screen and (max-width: 768px) {
   .titre .containerTitle h1 {
     font-size: 2.5rem;
+    margin-top: 0;
   }
 
   .titre .containerReview {
